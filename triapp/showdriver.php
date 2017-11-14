@@ -7,8 +7,7 @@ function showRide()
 {
 	global $connect;
 	//$username =$_POST["username"];
-	$driver =$_POST["driver"];
-	$query = " Select * FROM RIDE where driver='any'||driver='$driver' ORDER BY status DESC; ";
+	$query = " Select * FROM DRIVER where available='yes' ORDER BY username ASC; ";
 	
 	$result = mysqli_query($connect, $query);
 	$number_of_rows = mysqli_num_rows($result);
