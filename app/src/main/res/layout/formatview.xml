@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/placelist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/textView20"
+        android:text="Unknown" />
+
+    <TextView
+        android:id="@+id/timelist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView23"
+        android:layout_alignBottom="@+id/textView23"
+        android:layout_toEndOf="@+id/textView23"
+        android:text="Unknown" />
+
+    <TextView
+        android:id="@+id/statuslist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView24"
+        android:layout_alignBottom="@+id/textView24"
+        android:layout_toEndOf="@+id/textView24"
+        android:text="Unknown" />
+
+    <ImageView
+        android:id="@+id/ivstatus"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/placelist"
+        android:layout_marginEnd="14dp"
+        app:srcCompat="@drawable/tricappicon" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="Place:" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/placelist"
+        android:layout_marginTop="14dp"
+        android:text="Time: " />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/timelist"
+        android:layout_marginTop="11dp"
+        android:text="Status: " />
+
+    <TextView
+        android:id="@+id/pricelist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/ivstatus"
+        android:layout_below="@+id/ivstatus"
+        android:text="TextView" />
+
+</RelativeLayout>

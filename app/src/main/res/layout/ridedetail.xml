@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView27"
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/imageView28"
+        android:adjustViewBounds="true"
+        android:cropToPadding="true"
+        app:srcCompat="@drawable/tricapp" />
+
+    <ImageView
+        android:id="@+id/imageView28"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@android:color/black" />
+
+    <ImageView
+        android:id="@+id/imageView29"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/imageView27"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@android:color/black" />
+
+    <ImageView
+        android:id="@+id/imageView30"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        app:srcCompat="@android:color/black" />
+
+    <TextView
+        android:id="@+id/placedetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView16"
+        android:text="TextView"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/notedetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView22"
+        android:text="TextView"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/timedetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView21"
+        android:text="TextView"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/statusdetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView18"
+        android:text="TextView"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/pricedetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/tv"
+        android:layout_marginTop="22dp"
+        android:text="TextView"
+        android:textColor="@android:color/black" />
+
+    <Button
+        android:id="@+id/acceptdetail"
+        style="@android:style/Widget.Button.Inset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/pricedetail"
+        android:layout_marginTop="21dp"
+        android:text="Get this ride" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/imageView29"
+        android:layout_marginTop="19dp"
+        android:text="Place: "
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/placedetail"
+        android:layout_marginTop="15dp"
+        android:text="Status: "
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/notedetail"
+        android:layout_marginTop="13dp"
+        android:text="Price: "
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/statusdetail"
+        android:layout_marginTop="13dp"
+        android:text="Time:"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/timedetail"
+        android:layout_marginTop="13dp"
+        android:text="Note: "
+        android:textColor="@android:color/black" />
+
+</RelativeLayout>
