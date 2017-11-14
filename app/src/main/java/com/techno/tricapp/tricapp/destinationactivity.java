@@ -108,10 +108,10 @@ public class destinationactivity extends AppCompatActivity
 
 
                 radioButton = (RadioButton) findViewById(selectedId);
-                Intent i = new Intent(destinationactivity.this,rideconfirmationactivity.class);
+                Intent i = new Intent(destinationactivity.this,choosedriver.class);
                 i.putExtra("place",radioButton.getText().toString());
                 i.putExtra("note",noteinput.getText().toString());
-                i.putExtra("driver","any");
+               //i.putExtra("driver","any");
                 startActivity(i);
 
 

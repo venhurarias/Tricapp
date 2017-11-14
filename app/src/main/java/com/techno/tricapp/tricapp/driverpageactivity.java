@@ -71,10 +71,12 @@ public class driverpageactivity extends AppCompatActivity implements AsyncRespon
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.driverpage);
-
-
-
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        HashMap postData = new HashMap();
+        postData.put("driver",preferences.getString("username", ""));
+
+
+
         ivstatus=(ImageView) findViewById(R.id.ivstatus);
         drivername = (TextView) findViewById(R.id.drivername);
         availablebtn=(Button) findViewById(R.id.availablebtn);
@@ -180,9 +182,9 @@ availablebtn.setOnClickListener(new View.OnClickListener() {
         //SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         final String URL = "http://"+preferences.getString("ip", "")+"/triapp/showride.php";
 
-        PostResponseAsyncTask taskread= new PostResponseAsyncTask(driverpageactivity.this, this);
+        PostResponseAsyncTask taskread= new PostResponseAsyncTask(driverpageactivity.this,postData,false, this);
         //taskread.execute("http://192.168.254.105/triapp/showride.php");
-        taskread.execute(URL);
+       taskread.execute(URL);
 
 
     }

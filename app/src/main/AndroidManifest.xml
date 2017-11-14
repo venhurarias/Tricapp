@@ -37,6 +37,7 @@
         <activity android:name=".firstactivity"/>
 
         <activity android:name=".startupactivity"/>
+        <activity android:name=".choosedriver"/>
     </application>
 
 </manifest>
