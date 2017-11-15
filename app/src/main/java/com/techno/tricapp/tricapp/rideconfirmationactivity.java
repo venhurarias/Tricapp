@@ -38,7 +38,10 @@ public class rideconfirmationactivity extends AppCompatActivity {
     private Button yesbutton, gobackbutton;
     private String price="";
 
-
+    @Override
+    public void onBackPressed() {
+       // super.onBackPressed();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,7 +78,8 @@ public class rideconfirmationactivity extends AppCompatActivity {
         gobackbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                onBackPressed();
+                Intent in = new Intent(rideconfirmationactivity.this, destinationactivity.class);
+                startActivity(in);
             }
         });
         yesbutton.setOnClickListener(new View.OnClickListener() {

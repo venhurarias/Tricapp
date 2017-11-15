@@ -9,6 +9,9 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 
@@ -29,6 +32,8 @@ import java.util.ArrayList;
 public class choosedriver extends AppCompatActivity implements AsyncResponse, AdapterView.OnItemClickListener {
     private ArrayList<showdriver> ridelist;
     private ListView list;
+    private CheckBox checkBox;
+    private Button proceedbutton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +41,34 @@ public class choosedriver extends AppCompatActivity implements AsyncResponse, Ad
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.choose_driver);
+        list =(ListView)findViewById(R.id.chooselist);
+        checkBox=(CheckBox) findViewById(R.id.checkBox);
+        proceedbutton=(Button) findViewById(R.id.proceedbutton);
+
+        proceedbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent i = new Intent(choosedriver.this, rideconfirmationactivity.class);
+                i.putExtra("driver", "any");
+                i.putExtra("place", getIntent().getStringExtra("place"));
+                i.putExtra("note", getIntent().getStringExtra("note"));
+                startActivity(i);
+            }
+        });
+
+        checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+               if(checkBox.isChecked()){
+                   list.setVisibility(View.GONE);
+                   proceedbutton.setVisibility(View.VISIBLE);
+               }else{
+                   list.setVisibility(View.VISIBLE);
+                   proceedbutton.setVisibility(View.GONE);
+               }
+            }
+        });
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         final String URL = "http://"+preferences.getString("ip", "")+"/triapp/showdriver.php";
 
@@ -88,7 +121,7 @@ public class choosedriver extends AppCompatActivity implements AsyncResponse, Ad
 
 
 
-        list =(ListView)findViewById(R.id.chooselist);
+
         list.setAdapter(adapter);
         list.setOnItemClickListener(this);
 
