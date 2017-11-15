@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Tricapp.iml" filepath="$PROJECT_DIR$/Tricapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TRICapp.iml" filepath="$PROJECT_DIR$/TRICapp.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
