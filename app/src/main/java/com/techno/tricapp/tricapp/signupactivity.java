@@ -69,7 +69,7 @@ public class signupactivity extends AppCompatActivity
                                 JSONObject jsonObject = new JSONObject(response);
                                 if(jsonObject.names().get(0).equals("success")){
                                     Toast.makeText(getApplicationContext(),"SUCCESS "+jsonObject.getString("success"),Toast.LENGTH_SHORT).show();
-                                    startActivity(new Intent(getApplicationContext(),destinationactivity.class));
+                                    startActivity(new Intent(getApplicationContext(),firstactivity.class));
                                 }else{
                                     Toast.makeText(getApplicationContext(),"ERROR "+jsonObject.getString("error"),Toast.LENGTH_SHORT).show();
 
