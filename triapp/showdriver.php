@@ -7,7 +7,7 @@ function showRide()
 {
 	global $connect;
 	//$username =$_POST["username"];
-	$query = " Select * FROM DRIVER where available='yes' ORDER BY username ASC; ";
+	$query = " Select * FROM DRIVER where available='yes' ORDER BY id ASC; ";
 	
 	$result = mysqli_query($connect, $query);
 	$number_of_rows = mysqli_num_rows($result);

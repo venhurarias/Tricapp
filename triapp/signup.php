@@ -14,7 +14,7 @@ $platenumber=$_POST["platenumber"];
 $password= $_POST["password"];
 $address= $_POST["address"];
 $reg=$_POST["reg"];
-if(!empty($username) && !empty($password)&& !empty($firstname)&& !empty($lastname)&& !empty($platenumber)){
+if(!empty($username) && !empty($password)&& !empty($firstname)&& !empty($lastname)&& !empty($platenumber)&& !empty($address)&& !empty($reg)){
 	$query = "Select * from driver where username='$username' ";
 			$result = mysqli_query($connect, $query);
 			if(mysqli_num_rows($result)>0){
@@ -32,6 +32,8 @@ mysqli_close($connect);
 else{
 	$json['error'] = 'you must type all fields';
 				echo json_encode($json);
+				mysqli_query($connect, $query) or die (mysqli_error($connect));
+mysqli_close($connect);
 }
 
 }
